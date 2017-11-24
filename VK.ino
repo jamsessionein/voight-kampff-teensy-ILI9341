@@ -55,7 +55,6 @@ void setup() {
   Serial.begin(115200);
   //  Don't do anything until the Serial communication is established. Remove this when finalizing code.
   while(!Serial);
-  Serial.println("Talking");
   //  Randomize the seed
   randomSeed(analogRead(0));
   //tft.setBrightness(0);
@@ -64,17 +63,12 @@ void setup() {
   SetupOrClearClipRectAndOffsets();
   tft.fillScreen(BACKGROUND);
   tft.setBrightness(255);
-  for(int i = 0; i<=ui.screenHeight/2; i+=20){
+
+  /*for(int i = 0; i<=ui.screenHeight/2; i+=20){
     tft.setClipRect(0,ui.screenHeight/2-i, ui.screenWidth, i*2);
     ui.startLAPDScreen();
-  }
-  //startUpWhineSound();
-  //tft.setBrightness(255);
-  //tft.begin();
-  //delay(500);
-  //tft.setBrightness(0);
-  //tft.fillScreen(BACKGROUND);
-  //ui.startLAPDScreen();
+  }*/
+
   //delay(1000);
   //tft.fillScreen(BACKGROUND);
   //tft.setBrightness(120);
@@ -88,14 +82,7 @@ void setup() {
 }
 
 void loop() {
-  /*if(showStartScreen){
-    //  We're entering the loop on our first go through. Lets fade the start screen up.
-    if(logoStartFadeTimer > 5 && screenBrightness <= 255){
-      tft.setBrightness(screenBrightness);
-      screenBrightness+=5;
-      logoStartFadeTimer = 0;
-    }
-  }*/
+
 }
 
 void initializeFlashEffect(){
